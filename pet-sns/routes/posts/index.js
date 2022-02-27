@@ -16,4 +16,5 @@ router.post("/", checkUser, upload.single("image"), postCtr.upload);
 //수정은 put이지만 웹에서 form으로 보낼 때는 get, post 밖에 사용할 수 없으므로 post를 사용
 router.post("/update/:id", checkUser, postCtr.update);
 router.post("/delete/:id", checkUser, postCtr.delete);
+router.post("/like/:id", checkUser, postCtr.like);
 module.exports = router;
