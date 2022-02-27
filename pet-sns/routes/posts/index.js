@@ -17,4 +17,5 @@ router.post("/", checkUser, upload.single("image"), postCtr.upload);
 router.post("/update/:id", checkUser, postCtr.update);
 router.post("/delete/:id", checkUser, postCtr.delete);
 router.post("/like/:id", checkUser, postCtr.like);
+router.post("/comment/:id", checkUser, postCtr.comment);
 module.exports = router;

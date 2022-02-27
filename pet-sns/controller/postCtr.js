@@ -109,5 +109,21 @@ const postCtr = {
       post: result,
     });
   },
+
+  comment: async (req, res) => {
+    const { id } = req.params;
+    const post = await Post.findById(id);
+    const user = req.userInfo;
+    const { comment } = req.body;
+    const commentWrap = {
+      comment: comment,
+      user: user,
+    };
+    post.comment.push(commentWrap);
+    const result = await post.save();
+    res.status(200).json({
+      post: result,
+    });
+  },
 };
 module.exports = postCtr;
