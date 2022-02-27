@@ -3,6 +3,7 @@
   <head>
     <% include ./layout/header %>
     <link rel="stylesheet" href="/stylesheets/index.css" />
+    <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
     <% include ./layout/navbar %>
@@ -140,6 +141,7 @@
       });
 
       $(() => {
+        const name = "<%= isAuthenticated.username %>";
         const socket = io();
 
         $("#chat_form").submit(() => {
