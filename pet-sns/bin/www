@@ -19,7 +19,7 @@ db.once("open", () => {
   console.log("connected to mongodb server!!");
 });
 mongoose.connect(
-  `mongodb+srv://yoo2006:${dbConfig.pw}@first-project.oxikk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+  `mongodb+srv://yoo2006:${dbConfig.pw}@first-project.oxikk.mongodb.net/pet-sns?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
